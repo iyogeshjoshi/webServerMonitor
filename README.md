@@ -30,6 +30,7 @@ Start server by executing the following command
 $ node index.js
 
 ```
+you can add number of command whitelisted to the `cmd-whitelist.js` file only that commands will be allowed by the server.
 
 ## Contact
 You can contact me @ iyogeshjoshi@gmail.com
