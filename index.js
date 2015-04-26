@@ -1,3 +1,8 @@
+/**
+ * A web-based command line to administer the server using node.js
+ * @author Yogesh Joshi <iyogeshjoshi@gmail.com>
+ */
+
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
@@ -60,12 +65,10 @@ io.on('connection', function(socket){
   // create new user
   User.create({username: socket.id}, function(err, _user){
     if(err) console.error(err);
-    console.log(_user);
     user = _user;
   });
 
   socket.on('command', function(cmd){
-    console.log(whitelist.indexOf(cmd));
     if(whitelist.indexOf(cmd) != -1){
       exec(cmd, function(err, out){
         if(err){
@@ -84,6 +87,10 @@ io.on('connection', function(socket){
       socket.emit('channel', socket.name + ': \''+ cmd + '\' command not allowed!!');
     }
   });
+
+  socket.on('disconnect', function(){
+    console.log(socket.id+' - left!');
+  })
 });
 
 http.listen(7777, function(){
