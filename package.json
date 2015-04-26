@@ -1,0 +1,31 @@
+{
+  "name": "webAdminMon",
+  "version": "0.0.1",
+  "description": "web based command line to administer the server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yogesh Joshi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.3",
+    "connect": "^3.3.5",
+    "cookie-parser": "^1.3.4",
+    "express": "^4.12.3",
+    "express-session": "^1.11.1",
+    "mongoose": "^4.0.2",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^1.3.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iyogeshjoshi/webServerMonitor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iyogeshjoshi/webServerMonitor/issues"
+  },
+  "homepage": "https://github.com/iyogeshjoshi/webServerMonitor"
+}
